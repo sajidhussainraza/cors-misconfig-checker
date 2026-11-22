@@ -1,0 +1,16 @@
+CORS report: https://api.github.com
+Score: 97/100  Grade: A
+
+  Tested origin: https://evil.example
+  Access-Control-Allow-Origin: *
+  Access-Control-Expose-Headers: ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset, Warning
+  Vary: Accept,Accept-Encoding, Accept, X-Requested-With
+  Preflight:
+    Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE
+    Access-Control-Allow-Headers: Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match, If-Unmodified-Since, Accept-Encoding, X-GitHub-OTP, X-Requested-With, User-Agent, GraphQL-Features, X-Github-Next-Global-ID, X-GitHub-Api-Version, X-Fetch-Nonce, Copilot-Integration-Id, DD-CLIENT-TOKEN, X-Client-Application, X-Experiment-Commit-Agent-Version, Idempotency-Key
+    Access-Control-Max-Age: 86400
+    (preflight status: 204)
+
+Findings (1):
+  [LOW] Access-Control-Allow-Origin: Access-Control-Allow-Origin is '*', so any website can read the response. That is fine for genuinely public data and wrong for anything sensitive.
+        Fix: If the response is ever sensitive, replace '*' with an allow-list of the exact origins that need access.

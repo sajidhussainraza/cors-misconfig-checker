@@ -1,0 +1,8 @@
+CORS report: https://github.com
+Score: 100/100  Grade: A
+
+  Tested origin: https://evil.example
+  Vary: X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, X-Requested-With, X-GitHub-Client-Version, Accept-Language, Sec-Fetch-Site,Accept-Encoding, Accept, X-Requested-With
+  Preflight: status 404, no CORS headers
+
+No findings: CORS is not enabled, so the browser blocks cross-origin reads. That is the safe default; no website can read responses from this site.

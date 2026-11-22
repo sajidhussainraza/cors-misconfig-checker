@@ -1,0 +1,8 @@
+CORS report: https://example.com
+Score: 100/100  Grade: A
+
+  Tested origin: https://evil.example
+  CORS headers: none sent
+  Preflight: status 405, no CORS headers
+
+No findings: CORS is not enabled, so the browser blocks cross-origin reads. That is the safe default; no website can read responses from this site.

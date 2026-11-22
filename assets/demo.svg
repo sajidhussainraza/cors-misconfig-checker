@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" role="img" aria-labelledby="demoTitle demoDesc">
+  <title id="demoTitle">Static preview: CORS Misconfiguration Checker auditing example.com</title>
+  <desc id="demoDesc">Terminal output showing a CORS report for example.com: score 100 out of 100, grade A, no findings because no Access-Control-Allow-Origin header was sent. This is a static preview, not an animated GIF. The full real output is saved in examples/sample-output-example.com.txt.</desc>
+  <defs>
+    <linearGradient id="termBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14202E"/>
+      <stop offset="1" stop-color="#0B2239"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="430" rx="16" fill="url(#termBg)" stroke="#00B4D8" stroke-opacity="0.4" stroke-width="2"/>
+  <circle cx="48" cy="38" r="9" fill="#C0392B"/>
+  <circle cx="78" cy="38" r="9" fill="#D9A441"/>
+  <circle cx="108" cy="38" r="9" fill="#1FA97A"/>
+  <text x="500" y="44" font-family="monospace" font-size="18" fill="#F5F7FA" fill-opacity="0.6" text-anchor="middle">cors-misconfig-checker — terminal</text>
+  <g font-family="monospace" font-size="19">
+    <text x="36" y="96" fill="#00B4D8">$ python3 cors_misconfig_checker.py https://example.com</text>
+    <text x="36" y="134" fill="#F5F7FA">CORS report: https://example.com</text>
+    <text x="36" y="168" fill="#F5F7FA">Score: 100/100  Grade: A</text>
+    <text x="36" y="212" fill="#F5F7FA" fill-opacity="0.8">  Tested origin: https://evil.example</text>
+    <text x="36" y="256" fill="#F5F7FA" fill-opacity="0.8">  CORS headers: none sent</text>
+    <text x="36" y="294" fill="#F5F7FA" fill-opacity="0.8">  Preflight: status 405, no CORS headers</text>
+    <text x="36" y="338" fill="#1FA97A">No findings: CORS is not enabled, so the browser blocks</text>
+    <text x="36" y="366" fill="#1FA97A">cross-origin reads. That is the safe default; no website can</text>
+    <text x="36" y="394" fill="#1FA97A">read responses from this site.</text>
+  </g>
+</svg>
